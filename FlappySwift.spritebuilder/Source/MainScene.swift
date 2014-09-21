@@ -15,7 +15,7 @@ class MainScene: GameplayScene {
     var _grounds: [CCNode] = []
     
     var _sinceTouch: NSTimeInterval? = nil
-    var _obstacles: [CCNode] = []
+    var _obstacles: [Obstacle] = []
     var powerups: [CCNode] = []
     
     var _restartButton: CCButton? = nil
@@ -71,7 +71,6 @@ class MainScene: GameplayScene {
             _sinceTouch = 0.0
             
             super.touchBegan(touch, withEvent:event)
-            
         }
     }
     
@@ -92,6 +91,32 @@ class MainScene: GameplayScene {
             
             self.runAction(bounce)
         }
+    }
+    
+    func restart() {
+        let scene:CCScene = CCBReader.loadAsScene("MainScene")
+        CCDirector.sharedDirector().replaceScene(scene)
+    }
+    
+    override func addObstacle() {
+        let obstacle:Obstacle = CCBReader.load("Obstacle") as Obstacle
+        let screenPosition = self.convertToWorldSpace(CGPoint(x:380,y:0))
+        let worldPosition = physicsNode!.convertToNodeSpace(screenPosition)
+        obstacle.position = worldPosition
+        obstacle.setupRandomPosition()
+        obstacle.zOrder = DrawingOrder.Pipes.toRaw()
+        physicsNode!.addChild(obstacle)
+        _obstacles.append(obstacle)
+    }
+    
+    override func addPowerup() {
+        let powerup:CCSprite = CCBReader.load("Powerup") as CCSprite
+        
+        let first:Obstacle = _obstacles[0]
+        let second:Obstacle = _obstacles[1]
+        let last:Obstacle = _obstacles.last!
+        
+        powerup.position = CGPoint(x:last.position.x + (second.position.x-first.position.x)/4.0 + character!.contentSize.width, y:CGFloat(arc4random()%488)+200)
     }
     
 }
