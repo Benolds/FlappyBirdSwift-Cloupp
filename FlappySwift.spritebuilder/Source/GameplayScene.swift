@@ -21,22 +21,22 @@ class GameplayScene: CCNode, CCPhysicsCollisionDelegate {
     var trail: CCParticleSystem? = nil
     var points: Int = 0
     
-    override init() { }
-    
-    // is called when CCB file has completed loading
-    func didLoadFromCCB() {
-    }
-    
-    func initialize() {}
-    
-    func addObstacle() {}
-    
-    func showScore() {}
-    
-    func updateScore() {}
-    
-    func gameOver() {}
-    
-    func addPowerup() {}
+//    override init() { }
+//    
+//    // is called when CCB file has completed loading
+//    func didLoadFromCCB() {
+//    }
+//    
+//    func initialize() {}
+//    
+//    func addObstacle() {}
+//    
+//    func showScore() {}
+//    
+//    func updateScore() {}
+//    
+//    func gameOver() {}
+//    
+//    func addPowerup() {}
     
 }

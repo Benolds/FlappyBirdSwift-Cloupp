@@ -14,7 +14,7 @@ class MainScene: GameplayScene {
     var _ground2: CCNode? = nil
     var _grounds: [CCNode] = []
     
-    var _sinceTouch: NSTimeInterval? = nil
+    var _sinceTouch: NSTimeInterval = 0
     var _obstacles: [Obstacle] = []
     var powerups: [CCNode] = []
     
@@ -27,7 +27,7 @@ class MainScene: GameplayScene {
     override init() {}
     
     // is called when CCB file has completed loading
-    override func didLoadFromCCB() {
+    func didLoadFromCCB() {
         userInteractionEnabled = true
         _grounds = [_ground1!, _ground2!]
         
@@ -49,18 +49,18 @@ class MainScene: GameplayScene {
         physicsNode!.addChild(trail)
         trail!.visible = false
         
-        super.initialize()
+//        super.initialize()
     }
     
     func addToScene(node: CCNode) {
         physicsNode!.addChild(node)
     }
     
-    override func showScore() {
+    func showScore() {
         _scoreLabel!.visible = true
     }
     
-    override func updateScore() {
+    func updateScore() {
         _scoreLabel!.string = "\(points)"
     }
     
@@ -74,7 +74,7 @@ class MainScene: GameplayScene {
         }
     }
     
-    override func gameOver() {
+    func gameOver() {
         if !_gameOver {
             _gameOver = true
             _restartButton!.visible = true
@@ -98,7 +98,7 @@ class MainScene: GameplayScene {
         CCDirector.sharedDirector().replaceScene(scene)
     }
     
-    override func addObstacle() {
+    func addObstacle() {
         let obstacle:Obstacle = CCBReader.load("Obstacle") as Obstacle
         let screenPosition = self.convertToWorldSpace(CGPoint(x:380,y:0))
         let worldPosition = physicsNode!.convertToNodeSpace(screenPosition)
@@ -109,7 +109,7 @@ class MainScene: GameplayScene {
         _obstacles.append(obstacle)
     }
     
-    override func addPowerup() {
+    func addPowerup() {
         let powerup:CCSprite = CCBReader.load("Powerup") as CCSprite
         
         let first:Obstacle = _obstacles[0]
@@ -117,6 +117,58 @@ class MainScene: GameplayScene {
         let last:Obstacle = _obstacles.last!
         
         powerup.position = CGPoint(x:last.position.x + (second.position.x-first.position.x)/4.0 + character!.contentSize.width, y:CGFloat(arc4random()%488)+200)
+    }
+    
+    override func update(delta: CCTime) {
+        _sinceTouch += delta
+//        character!.rotation = max(-30, min(character!.rotation, 90.0))
+        character!.rotation = clampf(character!.rotation, -30.0, 90.0)
+        trail!.position = character!.position
+
+        let r = arc4random() % 255
+        let g = arc4random() % 255
+        let b = arc4random() % 255
+        
+//        trail!.startColor = CCColor(red:r, green:g, blue:b)
+        
+        //CCColor(ccColor3b: ccc3(arc4random() % 255, arc4random() % 255, arc4random() % 255))
+        
+        if character!.physicsBody.allowsRotation {
+            let angularVelocity = clampf(Float(character!.physicsBody.angularVelocity), -2.0, 1.0)
+            character!.physicsBody.angularVelocity = CGFloat(angularVelocity)
+        }
+
+        if _sinceTouch > 0.5 {
+            character!.physicsBody.applyAngularImpulse(CGFloat(-40000.0 * delta)) //(-40000.0 * delta) )
+        }
+        
+        physicsNode!.position = CGPoint(x:physicsNode!.position.x - (character!.physicsBody.velocity.x * CGFloat(delta)),y:physicsNode!.position.y)
+        
+        for ground in _grounds {
+            let groundWorldPosition = physicsNode!.convertToWorldSpace(ground.position)
+            let groundScreenPosition = self.convertToNodeSpace(groundWorldPosition)
+            
+            if groundScreenPosition.x <= (-1 * ground.contentSize.width) {
+                ground.position = CGPoint(x:ground.position.x + 2 * ground.contentSize.width, y:ground.position.y)
+            }
+        }
+        
+        var offScreenObstacles:[Obstacle] = []
+        
+        for obstacle in _obstacles {
+            let obstacleWorldPosition = physicsNode!.convertToWorldSpace(obstacle.position)
+            let obstacleScreenPosition = self.convertToNodeSpace(obstacleWorldPosition)
+            
+            if obstacleScreenPosition.x < -obstacle.contentSize.width {
+                offScreenObstacles.append(obstacle)
+            }
+        }
+        
+        if !_gameOver {
+            character!.physicsBody.velocity = CGPoint(x:character!.physicsBody.velocity.x, y: min(character!.physicsBody.velocity.y, 200.0))
+            super.update(delta)
+        }
+        
     }
     
 }
