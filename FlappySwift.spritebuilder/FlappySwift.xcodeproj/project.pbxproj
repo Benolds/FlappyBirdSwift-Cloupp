@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D6DF0AA19CE4C1D00B211DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0A919CE4C1D00B211DF /* AppDelegate.swift */; };
+		5D6DF0AD19CE4C5800B211DF /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0AC19CE4C5800B211DF /* MainScene.swift */; };
+		5D6DF0AF19CE509700B211DF /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0AE19CE509700B211DF /* GameplayScene.swift */; };
+		5D6DF0B119CE5E8100B211DF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0B019CE5E8100B211DF /* Character.swift */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -19,14 +23,11 @@
 		B71F5919188484E7003F4D28 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590F188484E7003F4D28 /* Settings.png */; };
 		B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5910188484E7003F4D28 /* Settings@2x.png */; };
 		B737893B180761570076A88C /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = B737893A180761570076A88C /* Published-iOS */; };
-		B737893F1807617C0076A88C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		B7378975180762440076A88C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896B180762440076A88C /* Default-568h@2x.png */; };
 		B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896C180762440076A88C /* Default-Landscape~ipad.png */; };
 		B7378977180762440076A88C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896D180762440076A88C /* Default.png */; };
 		B7378978180762440076A88C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896E180762440076A88C /* Default@2x.png */; };
-		B73789871807631A0076A88C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B73789851807631A0076A88C /* main.m */; };
 		B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B737894B180761A90076A88C /* libcocos2d.a */; };
-		B7378994180767190076A88C /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B7378993180767190076A88C /* MainScene.m */; };
 		B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3117B978D7009739AE /* QuartzCore.framework */; };
 		B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3317B978D7009739AE /* OpenGLES.framework */; };
 		B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
@@ -56,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D6DF0A819CE4C1C00B211DF /* FlappySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlappySwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		5D6DF0A919CE4C1D00B211DF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
+		5D6DF0AC19CE4C5800B211DF /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScene.swift; path = Source/MainScene.swift; sourceTree = "<group>"; };
+		5D6DF0AE19CE509700B211DF /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameplayScene.swift; path = Source/GameplayScene.swift; sourceTree = "<group>"; };
+		5D6DF0B019CE5E8100B211DF /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Source/Character.swift; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -68,17 +74,12 @@
 		B71F590F188484E7003F4D28 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Settings.png; path = Icons/Settings.png; sourceTree = "<group>"; };
 		B71F5910188484E7003F4D28 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings@2x.png"; path = "Icons/Settings@2x.png"; sourceTree = "<group>"; };
 		B737893A180761570076A88C /* Published-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Published-iOS"; path = "Source/Resources/Published-iOS"; sourceTree = SOURCE_ROOT; };
-		B737893D1807617C0076A88C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/AppDelegate.h; sourceTree = "<group>"; };
-		B737893E1807617C0076A88C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Source/AppDelegate.m; sourceTree = "<group>"; };
 		B7378940180761A80076A88C /* cocos2d-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-ios.xcodeproj"; path = "Source/libs/cocos2d-iphone/cocos2d-ios.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		B737896B180762440076A88C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Source/Resources/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		B737896C180762440076A88C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Source/Resources/Default-Landscape~ipad.png"; sourceTree = SOURCE_ROOT; };
 		B737896D180762440076A88C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Source/Resources/Default.png; sourceTree = SOURCE_ROOT; };
 		B737896E180762440076A88C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Source/Resources/Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		B73789851807631A0076A88C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = SOURCE_ROOT; };
 		B73789861807631A0076A88C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Source/Prefix.pch; sourceTree = SOURCE_ROOT; };
-		B7378992180767190076A88C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Source/MainScene.h; sourceTree = "<group>"; };
-		B7378993180767190076A88C /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Source/MainScene.m; sourceTree = "<group>"; };
 		B77F1B2E17B978D7009739AE /* FlappySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F1B3117B978D7009739AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B77F1B3317B978D7009739AE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -125,10 +126,11 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B737893D1807617C0076A88C /* AppDelegate.h */,
-				B737893E1807617C0076A88C /* AppDelegate.m */,
-				B7378992180767190076A88C /* MainScene.h */,
-				B7378993180767190076A88C /* MainScene.m */,
+				5D6DF0A919CE4C1D00B211DF /* AppDelegate.swift */,
+				5D6DF0B019CE5E8100B211DF /* Character.swift */,
+				5D6DF0AC19CE4C5800B211DF /* MainScene.swift */,
+				5D6DF0AE19CE509700B211DF /* GameplayScene.swift */,
+				5D6DF0A819CE4C1C00B211DF /* FlappySwift-Bridging-Header.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -213,7 +215,6 @@
 		B77F1CCF17B978D8009739AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B73789851807631A0076A88C /* main.m */,
 				B73789861807631A0076A88C /* Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -251,7 +252,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = SBVP8ED765;
+						DevelopmentTeam = W88G8YNU4K;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -340,9 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
-				B7378994180767190076A88C /* MainScene.m in Sources */,
-				B73789871807631A0076A88C /* main.m in Sources */,
+				5D6DF0AD19CE4C5800B211DF /* MainScene.swift in Sources */,
+				5D6DF0AF19CE509700B211DF /* GameplayScene.swift in Sources */,
+				5D6DF0AA19CE4C1D00B211DF /* AppDelegate.swift in Sources */,
+				5D6DF0B119CE5E8100B211DF /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +404,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -418,7 +421,8 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -427,6 +431,8 @@
 				);
 				PRODUCT_NAME = FlappySwift;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlappySwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -436,6 +442,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -451,7 +458,8 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -459,6 +467,7 @@
 				);
 				PRODUCT_NAME = FlappySwift;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlappySwift-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
