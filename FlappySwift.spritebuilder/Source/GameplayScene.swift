@@ -27,8 +27,12 @@ class GameplayScene: CCNode, CCPhysicsCollisionDelegate {
 //    func didLoadFromCCB() {
 //    }
 //    
-//    func initialize() {}
-//    
+    
+    func initialize() {
+        println("initialize");
+    }
+    
+//
 //    func addObstacle() {}
 //    
 //    func showScore() {}

@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: CCAppDelegate, UIApplicationDelegate {
     
-    override func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]!) -> Bool {
+    override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]!) -> Bool {
         // Configure CCFileUtils to work with SpriteBuilder
         CCBReader.configureCCFileUtils()
         
