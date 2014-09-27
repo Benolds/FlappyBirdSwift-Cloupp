@@ -21,26 +21,32 @@ class GameplayScene: CCNode, CCPhysicsCollisionDelegate {
     var trail: CCParticleSystem? = nil
     var points: Int = 0
     
-//    override init() { }
-//    
-//    // is called when CCB file has completed loading
-//    func didLoadFromCCB() {
-//    }
-//    
+    override init() { }
     
-    func initialize() {
-        println("initialize");
+    // is called when CCB file has completed loading
+    func didLoadFromCCB() {
     }
     
-//
-//    func addObstacle() {}
-//    
-//    func showScore() {}
-//    
-//    func updateScore() {}
-//    
-//    func gameOver() {}
-//    
-//    func addPowerup() {}
+    
+    func initialize() {
+        // put your initialization code below this line
+        character = Character.createFlappy()
+        self.addToScene(character)
+        
+        // put your initialization code above this line
+    }
+    
+
+    func addToScene(node: CCNode?) {}
+    
+    func addObstacle() {}
+    
+    func showScore() {}
+    
+    func updateScore() {}
+    
+    func gameOver() {}
+    
+    func addPowerup() {}
     
 }

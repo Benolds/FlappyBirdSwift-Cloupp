@@ -27,7 +27,7 @@ class MainScene: GameplayScene {
     override init() {}
     
     // is called when CCB file has completed loading
-    func didLoadFromCCB() {
+    override func didLoadFromCCB() {
         
         userInteractionEnabled = true
         
@@ -64,19 +64,21 @@ class MainScene: GameplayScene {
         super.initialize()
     }
     
-    func addToScene(node: CCNode) {
+    override func addToScene(node: CCNode?) {
         if let cPhysicsNode = physicsNode {
-            cPhysicsNode.addChild(node)
+            if let cNode = node {
+                cPhysicsNode.addChild(node)
+            }
         }
     }
     
-    func showScore() {
+    override func showScore() {
         if let cScoreLabel = _scoreLabel {
             cScoreLabel.visible = true
         }
     }
     
-    func updateScore() {
+    override func updateScore() {
         if let cScoreLabel = _scoreLabel {
             cScoreLabel.string = "\(points)"
         }
@@ -94,7 +96,7 @@ class MainScene: GameplayScene {
         }
     }
 
-    func gameOver() {
+    override func gameOver() {
         if !_gameOver {
             _gameOver = true
             if let cRestartButton = _restartButton {
@@ -122,7 +124,7 @@ class MainScene: GameplayScene {
         CCDirector.sharedDirector().replaceScene(scene)
     }
 
-    func addObstacle() {
+    override func addObstacle() {
         let obstacle:Obstacle = CCBReader.load("Obstacle") as Obstacle
         let screenPosition = self.convertToWorldSpace(CGPoint(x:380,y:0))
         if let cPhysicsNode = physicsNode {
@@ -137,7 +139,7 @@ class MainScene: GameplayScene {
         _obstacles.append(obstacle)
     }
 
-    func addPowerup() {
+    override func addPowerup() {
         let powerup:CCSprite = CCBReader.load("Powerup") as CCSprite
         
         let first:Obstacle = _obstacles[0]
