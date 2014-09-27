@@ -119,7 +119,8 @@ class MainScene: GameplayScene {
         }
     }
 
-    func restart() {
+    override func restart() {
+        println("RESTART");
         let scene:CCScene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().replaceScene(scene)
     }
@@ -149,6 +150,15 @@ class MainScene: GameplayScene {
                 powerup.position = CGPoint(x:cLast.position.x + (second.position.x-first.position.x)/4.0 + cCharacter.contentSize.width, y:CGFloat(arc4random()%488)+200)
             }
         }
+    }
+    
+    func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair, character nodeA: CCNode, wildcard /*level*/ nodeB: CCNode) {
+        self.collisionWithObstacle()
+    }
+    
+    override func increaseScore() {
+        points++
+        self.updateScore()
     }
 
     override func update(delta: CCTime) {
@@ -212,7 +222,8 @@ class MainScene: GameplayScene {
             if let cCharacter = character {
                 cCharacter.physicsBody.velocity = CGPoint(x:cCharacter.physicsBody.velocity.x, y: min(cCharacter.physicsBody.velocity.y, 200.0))
             }
-//            super.update(delta)
+            
+            super.update(delta)
         }
     
     }

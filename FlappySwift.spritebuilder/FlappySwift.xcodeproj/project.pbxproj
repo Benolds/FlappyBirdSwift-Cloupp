@@ -12,6 +12,7 @@
 		5D6DF0AF19CE509700B211DF /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0AE19CE509700B211DF /* GameplayScene.swift */; };
 		5D6DF0B119CE5E8100B211DF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0B019CE5E8100B211DF /* Character.swift */; };
 		5D6DF0B319CE65F900B211DF /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DF0B219CE65F900B211DF /* Obstacle.swift */; };
+		5D9256DE19D6A650009C1D57 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9256DD19D6A650009C1D57 /* Goal.swift */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -64,6 +65,7 @@
 		5D6DF0AE19CE509700B211DF /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameplayScene.swift; path = Source/GameplayScene.swift; sourceTree = "<group>"; };
 		5D6DF0B019CE5E8100B211DF /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Source/Character.swift; sourceTree = "<group>"; };
 		5D6DF0B219CE65F900B211DF /* Obstacle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Obstacle.swift; path = Source/Obstacle.swift; sourceTree = "<group>"; };
+		5D9256DD19D6A650009C1D57 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Goal.swift; path = Source/Goal.swift; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				5D6DF0AC19CE4C5800B211DF /* MainScene.swift */,
 				5D6DF0B219CE65F900B211DF /* Obstacle.swift */,
 				5D6DF0AE19CE509700B211DF /* GameplayScene.swift */,
+				5D9256DD19D6A650009C1D57 /* Goal.swift */,
 				5D6DF0A819CE4C1C00B211DF /* FlappySwift-Bridging-Header.h */,
 			);
 			name = Source;
@@ -348,6 +351,7 @@
 				5D6DF0AF19CE509700B211DF /* GameplayScene.swift in Sources */,
 				5D6DF0B319CE65F900B211DF /* Obstacle.swift in Sources */,
 				5D6DF0AA19CE4C1D00B211DF /* AppDelegate.swift in Sources */,
+				5D9256DE19D6A650009C1D57 /* Goal.swift in Sources */,
 				5D6DF0B119CE5E8100B211DF /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
