@@ -2,7 +2,7 @@ Your First iPhone Game!
 =======================
 
 This tutorial is going to teach you how to make your own Flappy Bird for the iPhone! Your game will be written
-in Objective-C, the language used to write all native iPhone apps. You will be using a game
+in Swift, a new language Apple introduced in 2014 to make it easier to write iPhone apps. You will be using a game
 engine called Cocos2D that is very popular in the game industry.
 
 What Goes Into a Game?

@@ -26,6 +26,11 @@ class MainScene: GameplayScene {
     
     override init() {}
     
+     deinit {
+        println("deinit")
+        userInteractionEnabled = false
+    }
+    
     // is called when CCB file has completed loading
     override func didLoadFromCCB() {
         
@@ -121,8 +126,15 @@ class MainScene: GameplayScene {
 
     override func restart() {
         println("RESTART");
-        let scene:CCScene = CCBReader.loadAsScene("MainScene")
-        CCDirector.sharedDirector().replaceScene(scene)
+        
+//        let scene = CCBReader.loadAsScene("TestScene")
+        
+//        if let scene:CCScene = CCBReader.loadAsScene("MainScene") {
+//         //   CCDirector.sharedDirector().replaceScene(scene)
+//            println(scene)
+//        }
+        
+        CCDirector.sharedDirector().replaceScene(CCBReader.loadAsScene("TestScene"))
     }
 
     override func addObstacle() {

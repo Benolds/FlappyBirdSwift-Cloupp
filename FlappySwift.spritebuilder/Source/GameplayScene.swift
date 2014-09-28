@@ -86,6 +86,10 @@ class GameplayScene: CCNode, CCPhysicsCollisionDelegate {
     // is called when CCB file has completed loading
     func didLoadFromCCB() {
     }
+    
+    deinit {
+        
+    }
 
     func addToScene(node: CCNode?) {}
     
